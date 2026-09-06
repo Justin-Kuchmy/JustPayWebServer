@@ -5,7 +5,7 @@ import * as path from 'path';
 
 @Injectable()
 export class SeedService implements OnModuleInit {
-    constructor(private readonly dataSource: DataSource){console.log("seed service ctor");}
+    constructor(private readonly dataSource: DataSource){}
     onModuleInit(){
 	const driver = this.dataSource.driver as any;
 	const sqlPath = path.join(__dirname, '../../resources/inserts.sql');
